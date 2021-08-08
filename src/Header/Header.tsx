@@ -98,7 +98,7 @@ const CodingalDrawer = ({
 function Header() {
   const classes = useStyles();
   const { time, setTime } = useTimer();
-  const theme = useTheme()
+  const theme = useTheme();
   const screenSizeLessThanLg = useMediaQuery((theme: Theme) =>
     theme.breakpoints.down("md")
   );
@@ -170,7 +170,7 @@ function Header() {
             time={time}
             open={showDrawer}
             closeDrawer={() => setShowDrawer(false)}
-            openEndClassDialog={setOpenEndClassDialog}
+            openEndClassDialog={() => setOpenEndClassDialog(true)}
           />
         </AppBar>
       </div>
